@@ -2,8 +2,8 @@
  * C源程序名: hh.c
  * 作者: mike2718
  * 作用: 国内业余无线电台呼号分区信息查询C程序
- * 用法（在Linux下使用clang编译）：
- *   $ clang hh.c -o hh && ./hh
+ * 用法（在Arch Linux下使用pcc编译）：
+ *   $ pcc -g -std=c99 -O0 hh.c -o hh && ./hh
  */
 
 #include <stdio.h>
@@ -27,7 +27,7 @@ int main(void) {
 	printf("\n查询中国大陆业余无线电台呼号相关信息的程序\n\n");
 	printf("  目前功能有限，不能查询港澳台的呼号\n");
 	printf("  可能不准，不代表官方观点\n");
-	printf("  输入格式（例子）：BXXXXXX\n");
+	printf("  输入格式（例子）：BG7XTQ\n");
 	printf("------------------------------------------\n\n");
 
 	char h[11]; /* 最长10 */
