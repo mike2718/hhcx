@@ -2,7 +2,7 @@
  * C源程序名: hh.c
  * 作者: mike2718
  * 作用: 国内业余无线电台呼号分区信息查询C程序
- * 用法（在Arch Linux下使用pcc编译）：
+ * 用法（在 Arch Linux 下使用pcc编译）：
  *   $ pcc -g -std=c99 -O0 hh.c -o hh && ./hh
  */
 
