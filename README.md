@@ -3,7 +3,7 @@
 用法：
 
 ```
-$ pcc -g -std=c99 -O0 hh.c -o hh && ./hh
+$ pcc hhcx.c -o hhcx && ./hhcx
 
 查询中国大陆业余无线电台呼号相关信息的程序
 
