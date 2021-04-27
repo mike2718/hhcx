@@ -1,9 +1,13 @@
 /*
- * Cæºç¨‹åºå: hh.c
- * ä½œè€…: mike2718
- * ä½œç”¨: å›½å†…ä¸šä½™æ— çº¿ç”µå°å‘¼å·åˆ†åŒºä¿¡æ¯æŸ¥è¯¢Cç¨‹åº
- * ç”¨æ³•ï¼ˆåœ¨ Arch Linux ä¸‹ä½¿ç”¨pccç¼–è¯‘ï¼‰ï¼š
- *   $ pcc -g -std=c99 -O0 hh.c -o hh && ./hh
+ * CÔ´³ÌÐòÃû: hhcx.c
+ * ×÷Õß: Mike Akiba
+ * °æ±¾: v0.1
+ * ×÷ÓÃ: ¹úÄÚÒµÓàÎÞÏßµçÌ¨ºôºÅ·ÖÇøÐÅÏ¢²éÑ¯C³ÌÐò
+ * ±àÒë&ÔËÐÐ£º
+ *   GNU/Linux:
+ *     $ pcc hhcx.c -o hhcx && ./hhcx
+ *   Windows£º
+ *     D:\src>pcc hhcx.c -o hhcx.exe && .\hhcx.exe
  */
 
 #include <stdio.h>
@@ -24,73 +28,72 @@ void func(char *temp) {
 }
 
 int main(void) {
-	printf("\næŸ¥è¯¢ä¸­å›½å¤§é™†ä¸šä½™æ— çº¿ç”µå°å‘¼å·ç›¸å…³ä¿¡æ¯çš„ç¨‹åº\n\n");
-	printf("  ç›®å‰åŠŸèƒ½æœ‰é™ï¼Œä¸èƒ½æŸ¥è¯¢æ¸¯æ¾³å°çš„å‘¼å·\n");
-	printf("  å¯èƒ½ä¸å‡†ï¼Œä¸ä»£è¡¨å®˜æ–¹è§‚ç‚¹\n");
-	printf("  è¾“å…¥æ ¼å¼ï¼ˆä¾‹å­ï¼‰ï¼šBG7XTQ\n");
+	printf("\n²éÑ¯ÖÐ¹ú´óÂ½ÒµÓàÎÞÏßµçÌ¨ºôºÅÏà¹ØÐÅÏ¢µÄ³ÌÐò\n\n");
+	printf("  Ä¿Ç°²»ÄÜ²éÑ¯¸Û°ÄÌ¨µÄºôºÅ\n");
+	printf("  ¿ÉÄÜ²»×¼£¬²»´ú±í¹Ù·½¹Ûµã\n");
+	printf("  ÊäÈë¸ñÊ½£¨Àý×Ó£©£ºBG7XTQ\n");
 	printf("------------------------------------------\n\n");
 
-	char h[11]; /* æœ€é•¿10 */
+	char h[11]; /* ×î³¤10 */
 	int check;
 	do {
-		printf("è¾“å…¥è¦æŸ¥è¯¢çš„å‘¼å·ï¼š");
+		printf("ÊäÈëÒª²éÑ¯µÄºôºÅ£º");
 		check = scanf("%10s", h);
 		while (getchar()!='\n');
 		/*printf("%s\n", h);*/
 	} while (check != 1);
-	func(h);  /* è½¬æ¢ä¸ºå¤§å†™ */
+	func(h);  /* ×ª»»Îª´óÐ´ */
 
-	/* ç»“å°¾éžå­—æ¯ */
+	/* ½áÎ²·Ç×ÖÄ¸ */
 
-	/* ç¬¬äºŒä½ç”µå°ç§ç±» éžå­—æ¯ */
+	/* µÚ¶þÎ»µçÌ¨ÖÖÀà ·Ç×ÖÄ¸ */
 	if (h[0] != 'B' || h[1] < 'A' || h[1] > 'Z' || h[2] < '0' || h[2] > '9' || strlen(h) > 10 || strlen(h) < 4) {
-		printf("\n  è¾“å…¥é”™è¯¯ï¼å‘¼å·æ ¼å¼ä¸ç¬¦åˆæ³•å¾‹è§„å®š\n\n");
+		printf("\n  ÊäÈë´íÎó£¡ºôºÅ¸ñÊ½²»·ûºÏ·¨ÂÉ¹æ¶¨\n\n");
 		return 0;
 	}
-	printf("\nè¯¥å‘¼å·ä¿¡æ¯ï¼š\n\n");
+	printf("\n¸ÃºôºÅÐÅÏ¢£º\n\n");
 	if ((h[1] > 'K' && h[1] < 'R') || (h[1] > 'T' && h[1] < 'Y')) {   /* LMNOPQ || UVWX */
-		printf("  å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„ç•™ä½œå¤‡ç”¨\n");
+		printf("  ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹Áô×÷±¸ÓÃ\n");
 	} else {
-		if (h[1] == 'J') printf("  ä¸šä½™ä¿¡æ ‡å°æˆ–ç©ºé—´ä¸šä½™æ— çº¿ç”µå°\n");
-		if (h[1] == 'R') printf("  ä¸šä½™ä¸­ç»§å°\n");
+		if (h[1] == 'J') printf("  ÒµÓàÐÅ±êÌ¨»ò¿Õ¼äÒµÓàÎÞÏßµçÌ¨\n");
+		if (h[1] == 'R') printf("  ÒµÓàÖÐ¼ÌÌ¨\n");
 	}
 	switch (h[2]) {
 	case '1':
-		printf("  ç¬¬1åŒºï¼šåŒ—äº¬\n");
+		printf("  µÚ1Çø£º±±¾©\n");
 		break;
 	case '2':
-		printf("  ç¬¬2åŒºï¼šé»‘é¾™æ±Ÿã€å‰æž—ã€è¾½å®\n");
+		printf("  µÚ2Çø£ººÚÁú½­¡¢¼ªÁÖ¡¢ÁÉÄþ\n");
 		break;
 	case '3':
-		printf("  ç¬¬3åŒºï¼šå¤©æ´¥ã€å†…è’™å¤ã€æ²³åŒ—ã€å±±è¥¿\n");
+		printf("  µÚ3Çø£ºÌì½ò¡¢ÄÚÃÉ¹Å¡¢ºÓ±±¡¢É½Î÷\n");
 		break;
 	case '4':
-		printf("  ç¬¬4åŒºï¼šä¸Šæµ·ã€å±±ä¸œã€æ±Ÿè‹\n");
+		printf("  µÚ4Çø£ºÉÏº£¡¢É½¶«¡¢½­ËÕ\n");
 		break;
 	case '5':
-		printf("  ç¬¬5åŒºï¼šæµ™æ±Ÿã€æ±Ÿè¥¿ã€ç¦å»º\n");
+		printf("  µÚ5Çø£ºÕã½­¡¢½­Î÷¡¢¸£½¨\n");
 		break;
 	case '6':
-		printf("  ç¬¬6åŒºï¼šå®‰å¾½ã€æ²³å—ã€æ¹–åŒ—\n");
+		printf("  µÚ6Çø£º°²»Õ¡¢ºÓÄÏ¡¢ºþ±±\n");
 		break;
 	case '7':
 		if ((strlen(h) == 4) && (h[1] == 'S') && (h[3] == 'H')) {   /* BS7H */
-			printf("  é»„å²©å²›ä¸šä½™æ— çº¿ç”µå°\n");
+			printf("  »ÆÑÒµºÒµÓàÎÞÏßµçÌ¨\n");
 			break;
 		}
-		printf("  ç¬¬7åŒºï¼šæ¹–å—ã€å¹¿ä¸œã€å¹¿è¥¿ã€æµ·å—\n");
+		printf("  µÚ7Çø£ººþÄÏ¡¢¹ã¶«¡¢¹ãÎ÷¡¢º£ÄÏ\n");
 		break;
 	case '8':
-		printf("  ç¬¬8åŒºï¼šå››å·ã€é‡åº†ã€è´µå·žã€äº‘å—\n");
+		printf("  µÚ8Çø£ºËÄ´¨¡¢ÖØÇì¡¢¹óÖÝ¡¢ÔÆÄÏ\n");
 		break;
 	case '9':
-		printf("  ç¬¬9åŒºï¼šé™•è¥¿ã€ç”˜è‚ƒã€å®å¤ã€é’æµ·\n");
+		printf("  µÚ9Çø£ºÉÂÎ÷¡¢¸ÊËà¡¢ÄþÏÄ¡¢Çàº£\n");
 		break;
 	case '0':
-		printf("  ç¬¬0åŒºï¼šæ–°ç–†ã€è¥¿è—\n");
+		printf("  µÚ0Çø£ºÐÂ½®¡¢Î÷²Ø\n");
 		break;
 	}
 	printf("\n");
 	return 0;
 }
-
