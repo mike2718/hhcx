@@ -7,8 +7,6 @@
  *   GNU/Linux:
  *     $ pcc hhcx.c -o hhcx && ./hhcx
  *   Windows：
- *     pcc hhcx.c -o hhcx.exe && .\hhcx.exe
- *   或
  *     cl /nologo hhcx.c && .\hhcx.exe
  */
 
@@ -20,7 +18,7 @@ void func(char *temp) {
 	char *name;
 	name = strtok(temp, ":");
 
-	// 转换为大写
+	// 将字符串转换为大写
 	char *s = name;
 	while (*s) {
 		*s = toupper((unsigned char) *s);
@@ -96,5 +94,6 @@ int main(void) {
 		break;
 	}
 	printf("\n");
+
 	return 0;
 }

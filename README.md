@@ -3,7 +3,7 @@
 用法：
 
 ```
-cl /nologo hhcx.c && hhcx
+pcc hhcx.c -o hhcx && ./hhcx
 
 查询中国大陆业余无线电台呼号相关信息的程序
 
