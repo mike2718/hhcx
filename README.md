@@ -3,7 +3,7 @@
 用法：
 
 ```
-pcc hhcx.c -o hhcx && ./hhcx
+pcc -Wall -Wpedantic -Wextra -Werror -Wcast-qual -O0 -std=c11 hhcx.c -o hhcx && ./hhcx
 
 查询中国大陆业余无线电台呼号相关信息的程序
 

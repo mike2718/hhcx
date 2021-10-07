@@ -5,9 +5,7 @@
  * 作用: 国内业余无线电台呼号分区信息查询C程序
  * 编译&运行：
  *   GNU/Linux:
- *     $ pcc hhcx.c -o hhcx && ./hhcx
- *   Windows：
- *     cl /nologo hhcx.c && .\hhcx.exe
+ *     $ pcc -Wall -Wpedantic -Wextra -Werror -Wcast-qual -O0 -std=c11 hhcx.c -o hhcx && ./hhcx
  */
 
 #include <stdio.h>
