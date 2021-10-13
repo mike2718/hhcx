@@ -1,6 +1,12 @@
-# 国内业余无线电台呼号分区信息查询C源程序
+# 国内业余无线电台呼号信息查询C程序
 
-编译&运行：
+## 制作目的
+
+从输入的一个呼号中提取出尽可能多的信息。
+
+## 编译和运行
+
+例子：
 
 ```
 $ pcc -Wall -Wpedantic -Wextra -Werror -Wcast-qual -O0 -std=c11 hhcx.c -o hhcx && ./hhcx
